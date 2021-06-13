@@ -1,0 +1,128 @@
+<div class="section">
+    <mat-card class="card" [formGroup]="registerForm">
+        <h3 class="heading">Register</h3>
+        <table>
+
+
+            <tr>
+                <td> <label>Username: </label></td>
+                <td>
+                    <div class="example-container">
+
+                        <mat-form-field appearance="fill">
+
+                            <input type="text" formControlName="username" matInput placeholder="Username" required>
+                            <small style="color: red;">{{getUserNameErrorMsg()}}</small>
+                        </mat-form-field>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td> <label>Email: </label></td>
+                <td>
+                    <div class="example-container">
+
+                        <mat-form-field appearance="fill">
+
+
+                            <input type="email" formControlName="email" matInput placeholder="Email" required>
+                            <small style="color: red;">{{getEmailErrorMsg()}}</small>
+                        </mat-form-field>
+
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><label>FirstName: </label></td>
+                <td>
+                    <div class="example-container">
+
+                        <mat-form-field appearance="fill">
+
+
+                            <input type="text" formControlName="firstname" matInput placeholder="Firstname" required>
+                            <small style="color: red;">{{getFirstNameErrorMsg()}}</small>
+                        </mat-form-field>
+
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label>LastName: </label></td>
+                <td>
+                    <div class="example-container">
+
+                        <mat-form-field appearance="fill">
+
+
+                            <input type="text" formControlName="lastname" matInput placeholder="Lastname" required>
+                            <small style="color: red;">{{getLastNameErrorMsg()}}</small>
+                        </mat-form-field>
+
+                    </div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td><label>Password: </label></td>
+                <td>
+                    <div class="example-container">
+
+                        <mat-form-field appearance="fill">
+
+
+                            <input type="password" formControlName="password" matInput placeholder="Password" required>
+                            <small style="color: red;">{{getPasswordErrorMsg()}}</small>
+                        </mat-form-field>
+
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Confirm Password: </label></td>
+                <td>
+                    <div class="example-container">
+
+                        <mat-form-field appearance="fill">
+
+
+                            <input type="password" formControlName="ConfimPassword" matInput
+                                placeholder="Confirm Password" required>
+                            <small style="color: red;">{{getConfirmPasswordErrorMsg()}}</small>
+                        </mat-form-field>
+
+                    </div>
+                </td>
+            </tr>
+
+
+
+            <tr>
+                <td><label>Contact Number: </label></td>
+                <td>
+                    <div class="example-container">
+
+                        <mat-form-field appearance="fill">
+
+
+                            <input type="number" formControlName="mobileNumber" matInput placeholder="Mobile Number"
+                                required>
+                            <small style="color: red;">{{getMobileNumberErrorMsg()}}</small>
+                        </mat-form-field>
+
+                    </div>
+                </td>
+            </tr>
+
+        </table>
+
+        <section>
+
+            <div class="example-button-row login-btn">
+                <button mat-raised-button color="primary" (click)="register()">Submit</button>
+            </div>
+        </section>
+    </mat-card>
+</div>

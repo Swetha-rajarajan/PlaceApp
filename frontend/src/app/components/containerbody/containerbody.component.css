@@ -1,0 +1,273 @@
+.searchBarContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 130px;
+  border-radius: 8px;
+  background: url("../../../assets/img/backgroundImg.png");
+}
+.searchBarContainerForm {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px;
+  width: 80%;
+  height: 40%;
+}
+.searchBarInput {
+  width: 70%;
+  margin-left: 20px;
+  height: 90%;
+  border: none;
+}
+.searchBarButton {
+  width: 150px;
+  height: 90%;
+  margin-right: 3px;
+  background-color: #1e86ff;
+  border: none;
+  border-radius: 4px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+}
+input::placeholder {
+  font-family: FontAwesome, "Roboto";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  color: #b9bdcf;
+}
+
+.containerBody {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+  width: calc(100vw - 220px);
+  min-height: calc(100vh - 100px);
+  background-color: #f6f7fb;
+  padding: 0px 100px;
+ 
+}
+
+.containerBodyContent {
+  width: 100%;
+  height: max-content;
+  margin-top: 20px;
+  display: flex;
+  
+}
+.containerBodyContentOptions {
+  width: 25%;
+  height: max-content;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 20px;
+}
+.containerBodyContentWorks {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.OptionsForm {
+  display: flex;
+  align-items: center;
+}
+.OptionsFormSearch {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+.OptionsFormSearchLabel {
+  margin-bottom: 10px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+
+  color: #b9bdcf;
+}
+.OptionsInput {
+  width: 14px;
+  height: 14px;
+  border: 1px solid #b9bdcf;
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+.OptionsLabel {
+  margin-left: 5px;
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 28px;
+  color: #334680;
+}
+.OptionsFormSearchInput {
+  height: 48px;
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  border: none;
+  padding-left: 20px;
+}
+
+.containerBodyContentWorksOption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 95%;
+  margin-bottom: 20px;
+  padding: 10px 0px;
+  min-height: 100px;
+  background: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+.containerBodyContentLeft {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 70%;
+}
+.worksOptionImageContainer {
+  height: 80px;
+  width: 80px;
+  margin-left: 20px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.worksOptionImage {
+  width: 100%;
+}
+
+.worksOptionImageContainerText {
+  display: flex;
+  flex-direction: column;
+  margin-left: 16px;
+  height: 90%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+.worksOptionCompany {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  color: #334680;
+  margin-bottom: 8px;
+}
+
+.worksOptionTitle {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #334680;
+}
+.worksOptionType {
+  margin-top: 8px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  color: #334680;
+  width: max-content;
+  border: 1px solid #334680;
+  border-radius: 4px;
+  padding: 6px 8px;
+}
+
+.worksOptionImageContainerSubText {
+  display: flex;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #b9bdcf;
+  align-self: flex-end;
+  width: max-content;
+  margin-bottom: 10px;
+  margin-right: 20px;
+}
+.worksOptionLocation {
+  margin-right: 10px;
+}
+
+.awesomeIcon {
+  margin-right: 5px;
+}
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 120px;
+  height: 120px;
+  align-self: center;
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #1e86ff;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}

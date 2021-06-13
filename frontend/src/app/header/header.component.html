@@ -1,0 +1,32 @@
+  <mat-toolbar class="toolbar">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span><a href = "/dashboard-component">PlaceApp</a></span>
+    <span class="example-spacer"></span>
+    
+    
+    
+    <div class="example-button-row ">
+      <button *ngIf="isTokenPresent()==true" mat-button color="accent" class="btn"><a href = "/home-component">Home</a></button>
+    </div>
+    <div class="example-button-row ">
+      <button *ngIf="isTokenPresent()==true" mat-button color="accent" class="btn"><a href = "/job-component">Bookmark</a></button>
+    </div>
+    <div class="example-button-row ">
+    <button *ngIf="isTokenPresent()==true" mat-button color="accent" class="btn"><a href = "/review-component">CompanyReview</a></button>
+</div>
+  <div class="example-button-row ">
+    <button *ngIf="isTokenPresent()==false" mat-button color="accent" class="btn"><a href = "/login-component">Login</a></button>
+    </div>
+    <div class="example-button-row ">
+      <button *ngIf="isTokenPresent()==false" mat-button color="accent" class="btn"><a href = "/register-component">Register</a></button>
+  </div>
+  <div class="example-button-row ">
+    <button *ngIf="isTokenPresent()==true" (click)="logOut()" class="btn"><a>Logout</a></button>
+</div>
+  
+</mat-toolbar>
+<router-outlet></router-outlet>
+
+

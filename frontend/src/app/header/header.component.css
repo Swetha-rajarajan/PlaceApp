@@ -1,0 +1,35 @@
+.example-spacer {
+    flex: 1 0 auto;
+  }
+.toolbar{
+    background-color:black;
+    position: fixed;
+    display: flex;
+    z-index: 999;
+    top:0;
+  }
+  span{
+      color:white;
+  }
+  mat-icon{
+    color:white; 
+  }
+  a{
+    text-decoration: none;
+    color: white;
+
+  }
+  a:hover{
+      color:brown;
+  }
+
+  button{
+    color : white
+  }
+button:hover{
+  color : brown;
+}
+
+
+ 
+  

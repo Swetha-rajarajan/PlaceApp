@@ -1,0 +1,65 @@
+<div class="containerBody">
+  <div class="containerBodyContent">
+    <div class="containerBodyContentOptions">
+      <a class="linkBackToSearch" routerLink="/" routerLinkActive="active">
+        <i class="arrow fas fa-arrow-left"></i>
+        <span class="backToSearch"> Back to search</span>
+      </a>
+      <span class="howToApply">How to Apply</span>
+      <p class="howToApplyDesc" *ngIf="lis.id">
+        Please email a copy of your resume and online portfolio to
+        <a class="howToApplyDescLink" href="{{ lis.company_url }}">{{
+          lis.company
+        }}</a>
+      </p>
+      <div id="loaderItems" class="lds-ellipsis" *ngIf="!lis.id">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <div class="containerBodyContentWorks">
+      <div *ngIf="lis.id">
+        <div class="worksOptionTitleContainer">
+          <div class="worksOptionTitleContainerDiv">
+            <span class="worksOptionTitle">{{ lis.title }} </span>
+            <span class="worksOptionType">{{ lis.type }} </span>
+          </div>
+          <span class="worksOptionTime">
+            <i class="far fa-clock awesomeIcon"></i
+            >{{ lis.created_at | dateAgo }}
+          </span>
+        </div>
+        <div class="worksOptionCompanyContainer">
+          <div class="worksOptionImageContainer">
+            <img
+              class="worksOptionImage"
+              src="{{
+                lis.company_logo
+                  ? lis.company_logo
+                  : 'https://safetyaustraliagroup.com.au/wp-content/uploads/2019/05/image-not-found.png'
+              }}"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <div class="worksOptionCompanyContainerLeft">
+            <span class="worksOptionCompany">{{ lis.company }} </span>
+            <span class="worksOptionLocation"
+              ><i class="fas fa-globe-americas awesomeIcon"></i
+              >{{ lis.location }}
+            </span>
+          </div>
+        </div>
+      </div>
+      <div id="CompanyDescId" class="worksOptionCompanyDesc"></div>
+      <div id="loaderItems" class="lds-ellipsis" *ngIf="!lis.id">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,146 @@
+
+
+.brand {
+    height: 60px;
+    width: 120px;
+    justify-content: left;
+    margin-left: 10px;
+}
+
+.nav-bar ul{
+    list-style-type: none;
+    justify-content: space-between;
+}
+
+
+.nav-bar ul li{
+    display: inline;
+    padding: 10px;
+
+}
+
+.nav-bar ul li a{
+    color: crimson;
+    text-decoration: none;
+}
+
+a:hover{
+    color: blue;
+    padding: 5px;
+    border-bottom: 2px solid red;
+}
+
+
+button{
+    margin-top: 5px;
+    margin-right: 20px;   
+    background-color: brown;
+    color: beige;
+    padding: 5px;
+    height: 50px;
+    border-radius: 10px;
+    width: 100px;
+    border-color:  2px solid #ffffff;
+}
+
+button:hover{
+    background-color: aqua;
+    color: blue;
+}
+
+.hero-unit-container{
+        background-image: url('../../assets/img/bg/job-bg.jpg');
+        height: 400px;
+        text-align: center;
+        background-size: cover;
+
+}
+
+.hero-unit-mask{
+    height: 400px;
+    padding-top: 200px;
+}
+
+
+.hero-unit-mask h1{
+    padding-bottom: 40px;
+    font-size: 40px;
+}
+
+.hero-unit-mask a{
+    margin: 0%;
+    text-decoration: none;
+    color: white;
+    background-color: brown;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px auto;
+    display: block;
+    width: 120px;
+}
+
+.hero-unit-mask a:hover{
+    background-color: aqua;
+    color: blue;
+}
+
+.paper{
+    /*height: 300px;
+    width: 250px; */
+    background-color: #fff;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0 0 400px grey;
+}
+
+.paper h1{
+    font-size: 16px;
+    color: blueviolet;
+}
+
+.paper img{
+    height: 180px;
+    width: 160px;
+}
+
+
+.paper p{
+    color: brown;
+    padding: 4px;
+    font-size: 20px;
+    justify-content: space-around;
+
+}
+
+.paper-flex-container{
+    display: flex;
+    background-color: bisque;
+    flex-direction: column;
+    
+}
+
+.paper-flex-container h1{
+    font-size: 20px;
+    margin: 5px auto;
+}
+
+.paper-flex-row{
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    text-justify: auto;
+    
+
+}
+
+
+footer{
+    height: 50px;
+    background-color:beige;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: Arial;
+}

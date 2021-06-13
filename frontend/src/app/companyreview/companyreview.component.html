@@ -1,0 +1,29 @@
+<div class="searchBarContainer">
+  <input type="text" class="form-control" id="search-text" aria-describedby="search-text"
+      [(ngModel)]="searchCompany" placeholder="&#xf0b1;    Enter Company Name" autofocus>
+</div>
+
+<form>
+      <h4>Add Reviews</h4>
+      <label>
+          <input type="text" class="input" [(ngModel)]="companyreview.companyName" name="companyName" placeholder="Company Name" />
+      </label>
+      <label>
+          <input type="text" class="input" [(ngModel)]="companyreview.review" name="Review" placeholder="Review" />
+      </label>
+      <label>
+          <input type="text" class="input" [(ngModel)]="companyreview.reviewerName" name="reviewerName" placeholder="Reviewer Name" />
+      </label>
+      <button mat-raised-button color="primary" (click)="addReview()">Add Review</button>
+  </form>
+
+<mat-card class="example-card" *ngFor="let companyreview of reviewlist | companyfilter: searchCompany">
+    <mat-card-header>
+      <mat-card-title>{{companyreview.companyName}}</mat-card-title>      
+    </mat-card-header>
+    <img mat-card-image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT--MS4mxozfWCQr-5jxcS-2bMjpuPCojS8ZfgDV7HJIDfN5KnXlGg8UvjpDcriAnn90WI&usqp=CAU" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <p>{{companyreview.review}}</p>
+      <p>Reviewer: {{companyreview.reviewerName}}</p>
+    </mat-card-content>
+  </mat-card>

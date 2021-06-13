@@ -1,0 +1,107 @@
+<div class="containerBody">
+  <div class="searchBarContainer">
+    <form class="searchBarContainerForm" action="">
+      <input
+        class="searchBarInput"
+        placeholder="&#xf0b1;    Title, companies, expertise or benefits"
+        type="search"
+        [(ngModel)]="search"
+        name="something"
+        (keyup.enter)="addInput()"
+      />
+      <button class="searchBarButton">Search</button>
+    </form>
+  </div>
+  <div class="containerBodyContent">
+    <div class="containerBodyContentOptions">
+      <form class="OptionsForm" action="">
+        <input class="OptionsInput" type="checkbox" name="" id="FullTime" />
+        <label class="OptionsLabel" for="">Full Time</label>
+      </form>
+      <form class="OptionsFormSearch">
+        <label class="OptionsFormSearchLabel" for="">Location</label>
+        <input
+          class="OptionsFormSearchInput"
+          placeholder="&#xf0ac;    City, state or country"
+          type="search"
+          [(ngModel)]="search"
+          name="something"
+        />
+      </form>
+      <form class="OptionsForm" action="">
+        <input class="OptionsInput" type="checkbox" name="" id="React" />
+        <label class="OptionsLabel" for="">React</label>
+      </form>
+      <form class="OptionsForm" action="">
+        <input class="OptionsInput" type="checkbox" name="" id="Java" />
+        <label class="OptionsLabel" for="">Java</label>
+      </form>
+      <form class="OptionsForm" action="">
+        <input class="OptionsInput" type="checkbox" name="" id="PHP" />
+        <label class="OptionsLabel" for="">PHP</label>
+      </form>
+    </div>
+    <div class="containerBodyContentWorks">
+      <div class="lds-ellipsis" *ngIf="(lis | filter: search).length < 1">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+      <div
+        class="containerBodyContentWorksOption"
+        *ngFor="
+          let e of lis | filter: search;
+          let i = index;
+          trackBy: trackByFn
+        "
+       
+      >
+        <div class="containerBodyContentLeft">
+          <div class="worksOptionImageContainer">
+            <img
+              class="worksOptionImage"
+              src="{{
+                e.company_logo
+                  ? e.company_logo
+                  : 'https://safetyaustraliagroup.com.au/wp-content/uploads/2019/05/image-not-found.png'
+              }}"
+              alt=""
+              srcset=""
+              routerLink="/job/{{ e.id }}"
+              routerLinkActive="active"
+
+            />
+          </div>
+          <div class="worksOptionImageContainerText">
+            <span class="worksOptionCompany">{{ e.company }} </span>
+            <span class="worksOptionTitle">{{ e.title }} </span>
+            <span class="worksOptionType">{{ e.type }} </span>
+          </div>
+        </div>
+        <div class="worksOptionImageContainerSubText">
+          <span class="worksOptionLocation"
+            ><i class="fas fa-globe-americas awesomeIcon"></i>{{ e.location }}
+          </span>
+          <span class="worksOptionTime">
+            <i class="far fa-clock awesomeIcon"></i>{{ e.created_at | dateAgo }}
+          </span>
+        </div>
+        <span>
+          <button mat-raised-button color="primary" (click) = "addToBookmark(e.title,e.location,e.company)">Add to Bookmark</button>
+        </span>
+      </div>
+      <div
+        id="loaderItems"
+        class="lds-ellipsis"
+        *ngIf="lis.length > 0 && search === ''"
+      >
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+</div>
